@@ -1,5 +1,9 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import NavBar from '../component/nav_bar'
+import ArticleTitle from '../component/aticle_title'
+import ArrowIcon from '../component/arrow_icon'
+
 
 export default function About() {
   return (
@@ -12,14 +16,15 @@ export default function About() {
         <link rel="icon" href="/favicon.png" />
   </Head>
 
-    <main className={styles.main}>
-      <div>
-        <h1></h1>
+    <main className={styles.main} style={{backgroundColor:"var(--quaternary-color)"}}>
+      <NavBar />
+      <ArticleTitle title="About Us"/>
+      <ArticleTitle title="DEPARTMENTS"/>
+      <div className={styles.arrow}>
+          <ArrowIcon src="/upwardArrow.png" href="/home" />
+          <ArrowIcon src="/downwardArrow.png" href="/contact" />
       </div>
-
-      <div>
-        <h1></h1>
-      </div>
+      
 
       <div>
         <p></p>

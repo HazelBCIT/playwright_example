@@ -282,8 +282,18 @@
   }
 }
 
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
 .background_image {
-background: url('/backgroundMountain.jpg') no-repeat center center/cover;
+background: no-repeat center center/cover;
 position: absolute;
 width: 100%;
 height: 100%;
@@ -295,10 +305,10 @@ z-index: -1;
 .button{
   height:30px;
   padding: 5px 12px;
-  margin: 3px;
-  border: 2px solid var(--secondary-color);
+  margin-right: 12px;
+  border: 1.5px solid var(--secondary-color);
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.01);
   color: var(--secondary-color);
 }
 
@@ -306,3 +316,53 @@ z-index: -1;
   background-color:var(--secondary-color);
   color:var(--quaternary-color);
 }
+
+.border {
+  height: 3px; 
+  background:var(--secondary-color);
+  margin: 15px 0;
+}
+
+.icon {
+  height: 35px;
+  width: 40px;
+  margin: 5px;
+  display: block;
+}
+
+.nav_bar {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1% 5%;
+}
+
+.dropdown_menu {
+background: url("/menuBackground.png") no-repeat center center/cover;
+height: 240px;
+width: 240px;
+padding: 35px 15px;
+position: fixed;
+top: 0;
+left: 0;
+}
+
+.list {
+  list-style-type: none;
+  font-size: 18px;
+  height: 100%;
+  padding: 25px 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.arrow {
+  overflow: hidden;
+  position: fixed;
+  bottom:10%;
+  right:10%;
+}
+
