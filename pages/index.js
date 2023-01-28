@@ -3,6 +3,7 @@ import { Inter } from '@next/font/google'
 import styles from '../styles/Home.module.css'
 import NavBar from '../component/nav_bar'
 import ArrowIcon from '../component/arrow_icon'
+import Button from '../component/button'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -37,12 +38,8 @@ export default function Home() {
         </p>
 
         <div className={styles.row} style={{marginTop:"15px"}}>
-          <a href="/about">
-            <button className={styles.button}>More About Us</button>
-          </a>
-          <a href="/contact">
-            <button className={styles.button}>Contact Us</button>
-          </a>
+          <Button href="/about" title="More About Us" />
+          <Button href="/contact" title="Contact Us" />
         </div >
       </div>
 

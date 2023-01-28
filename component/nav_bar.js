@@ -1,6 +1,5 @@
 import styles from '../styles/Home.module.css'
 import React, { useState } from "react";
-import { DropdownMenu } from 'semantic-ui-react';
 
 export default function NavBar() {
   const [showDropdown, setShowDropdown] = useState(false);

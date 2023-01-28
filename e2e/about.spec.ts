@@ -154,10 +154,10 @@ test.describe('Main area', () => {
 // })
 
 
-// test.describe('The Arrow Area', () => {
-//     test('Link tag and navigation', async({ page }) => {
-//         await page.goto(urlAbout)
+test.describe('The Arrow Area', () => {
+    test('Link tag and navigation', async({ page }) => {
+        await page.goto(urlAbout)
 
-//         await expect(page.locator('a > span > img')).toHaveCount(2);
-//     })
-// })
+        await expect(page.locator('a > span > img')).toHaveCount(2);
+    })
+})
