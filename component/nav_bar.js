@@ -29,12 +29,13 @@ export default function NavBar() {
           {showDropdown && (
               <>
                <div className={`${styles.row} ${styles.dropdown_menu}`}>
-                <img 
-                    className={styles.icon}
-                    style={{margin:"0px 50px 0px 15px"}}
-                    onClick={handleClick} 
-                    src="/close_icon.png"
-                />
+                <h1
+                  className={styles.icon}
+                  style={{margin:"0px 50px 0px 20px"}}
+                  onClick={handleClick} 
+                > 
+                X   
+                </h1>
                 <ul className={styles.list}>
                   <li><a href="/">Home</a></li>
                   <li><a href="/about">About</a></li>

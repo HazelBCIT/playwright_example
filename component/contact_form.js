@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "../styles/Home.module.css";
 import Button from "./button";
 
@@ -12,15 +12,20 @@ export default function ContactForm(props) {
   const [ifEmailValid, setIfEmailValid] = useState(false)
   const [ifFirstNameValid, setIfFirstNameValid] = useState(false)
   const [ifLastNameValid, setIfLastNameValid] = useState(false)
+  const [btnVisibility, setBtnVisibility] = useState('hidden')
 
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(event.target.value)) {
       setEmailError("Email is invalid");
+      setBtnVisibility('hidden')
     } else {
       setEmailError("");
       setIfEmailValid(true);
+      // if(ifEmailValid && ifFirstNameValid && ifLastNameValid) {
+        setBtnVisibility('visible')
+      // }
     }
   };
 
@@ -31,9 +36,13 @@ export default function ContactForm(props) {
       setFirstNameError(
         "First name error. First letter must be capital. Must use alphabets only."
       );
+      setBtnVisibility('hidden')
     } else {
       setFirstNameError("");
       setIfFirstNameValid(true);
+      // if(ifEmailValid && ifFirstNameValid && ifLastNameValid) {
+        setBtnVisibility('visible')
+      // }
     }
   };
 
@@ -44,11 +53,16 @@ export default function ContactForm(props) {
       setLastNameError(
         "Last name error. First letter must be capital. Must use alphabets only."
       );
+      setBtnVisibility('hidden')
     } else {
       setLastNameError("");
       setIfLastNameValid(true);
+      // if(ifEmailValid && ifFirstNameValid && ifLastNameValid) {
+        setBtnVisibility('visible')
+      // }
     }
   };
+
 
   return (
     <div style={{width:"50vw"}}>
@@ -60,39 +74,58 @@ export default function ContactForm(props) {
                 <th className={styles.th_box}>First Name:</th>
                 <th className={styles.th_box} style={{paddingLeft:"5px"}}>Last Name:</th>
               </tr>
-              <input className={styles.input_box}
-                id="firstName"
-                placeholder="First Name Here"
-                onChange={handleFirstNameChange}
-              />
-              <input className={styles.input_box}
-                id="lastName" 
-                placeholder="Last Name Here" 
-                onChange={handleLastNameChange}
-              />
             </thead>
+            <tbody>
+              <tr className={styles.full}>
+                <td>
+                  <div>
+                    <input className={styles.input_box}
+                      id="firstName"
+                      placeholder="First Name Here"
+                      onChange={handleFirstNameChange}
+                    />
+                    <input className={styles.input_box}
+                      id="lastName" 
+                      placeholder="Last Name Here" 
+                      onChange={handleLastNameChange}
+                    />
+                  </div>
+                </td>
+              </tr>             
+            </tbody>
             <thead>
-              <tr>
+              <tr style={{width:"99%"}}>
                 <th>Email:</th>
               </tr>
-
-                <input
-                  style={{width:"99%",margin:"0.5%"}}
-                  id="email"
-                  placeholder="Email Here"
-                  onChange={handleEmailChange}
-                ></input>
-              
             </thead>
+            <tbody>
+              <tr className={styles.full}>
+                <td>
+                  <div>
+                    <input
+                      style={{width:"99%",margin:"0.5%"}}
+                      id="email"
+                      placeholder="Email Here"
+                      onChange={handleEmailChange}
+                    />
+                  </div>
+                </td>
+              </tr>
+            </tbody>
           </table>
         </fieldset>
       </form>
-      <p>{firstNameError}</p>
-      <p>{lastNameError}</p>
-      <p>{emailError}</p>
-      <button type="submit" style={{ visibility: ifEmailValid && ifFirstNameValid && ifLastNameValid ? "visible" : "hidden" }}>
+      <div style={{color:"red"}}>{firstNameError}</div>
+      <div style={{color:"red"}}>{lastNameError}</div>
+      <div style={{color:"red"}}>{emailError}</div>
+      <div className={styles.submit_button}>
+        <a href="/">
+          <button type="submit" className={styles.button} style={{ visibility: btnVisibility }}> 
+            Submit
+          </button>
+        </a>
         
-      </button>
+      </div>
     </div>
   );
 }

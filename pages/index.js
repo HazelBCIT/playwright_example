@@ -2,7 +2,7 @@ import Head from 'next/head'
 import { Inter } from '@next/font/google'
 import styles from '../styles/Home.module.css'
 import NavBar from '../component/nav_bar'
-import ArrowIcon from '../component/arrow_icon'
+import NavArrow from '../component/nav_arrow'
 import Button from '../component/button'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -19,7 +19,6 @@ export default function Home() {
     </Head>
 
     <main className={styles.main}>
-      {/* background image */}
       <div 
         className={styles.background_image} 
         style={{backgroundImage:"url('/backgroundMountain.jpg')"}}>
@@ -44,7 +43,7 @@ export default function Home() {
       </div>
 
         <div className={styles.arrow}>
-          <ArrowIcon src="/downwardArrow.png" href="/about" />
+          <NavArrow src="/downwardArrow.png" href="/about" />
         </div>
           
       </main>

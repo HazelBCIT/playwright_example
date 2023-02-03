@@ -2,7 +2,7 @@ import styles from '../styles/Home.module.css'
 import Head from 'next/head'
 import NavBar from '../component/nav_bar'
 import ArticleTitle from '../component/aticle_title'
-import ArrowIcon from '../component/arrow_icon'
+import NavArrow from '../component/nav_arrow'
 import ContactForm from '../component/contact_form'
 
 export default function Contact() {
@@ -32,7 +32,7 @@ export default function Contact() {
        <ContactForm />
 
        <div className={styles.arrow}>
-          <ArrowIcon src="/upwardArrow.png" href="/" />
+          <NavArrow src="/upwardArrow.png" href="/" />
        </div>
        
      </main>

@@ -2,7 +2,7 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import NavBar from '../component/nav_bar'
 import ArticleTitle from '../component/aticle_title'
-import ArrowIcon from '../component/arrow_icon'
+import NavArrow from '../component/nav_arrow'
 import Carousel from '../component/carousel'
 
 
@@ -22,8 +22,8 @@ export default function About() {
       <ArticleTitle title="About Us"/>
       
       <div className={styles.arrow}>
-          <ArrowIcon src="/upwardArrow.png" href="/" />
-          <ArrowIcon src="/downwardArrow.png" href="/contact" />
+          <NavArrow src="/upwardArrow.png" href="/" />
+          <NavArrow src="/downwardArrow.png" href="/contact" />
       </div>
       
       <div className={styles.article_container}>

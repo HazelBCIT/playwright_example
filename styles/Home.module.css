@@ -398,7 +398,16 @@ left: 0;
   justify-content: center;
   align-items: center;
   margin: 40px 0px;
+}
 
+.carousel_Img {
+  height:200px;
+  width:360px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0px;
 }
 
 .testOnImageHere {
@@ -437,4 +446,16 @@ left: 0;
   text-align: left;
 }
 
+.full {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.submit_button{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding-top: 10px;
+}
 
