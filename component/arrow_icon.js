@@ -1,15 +1,16 @@
 import styles from "../styles/Home.module.css";
 
 export default function ArrowIcon(props) {
-  const { src='', href='' } = props;
+
 
   return (
-    <a href={href}>
+    <a href={props.href}>
       <span>
         <img 
           className={styles.icon} 
           style={{padding:"0 5px", margin:"15px 0"}}
-          src={src}
+          src={props.src}
+          onClick={props.onClick}
         />
       </span>
     </a>

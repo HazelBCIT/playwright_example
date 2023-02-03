@@ -2,7 +2,7 @@ import styles from "../styles/Home.module.css";
 
 export default function ContactForm(props) {
   return (
-    <div>
+  
       <form>
         <fieldset>
           <table>
@@ -23,6 +23,6 @@ export default function ContactForm(props) {
           </table>
         </fieldset>
       </form>
-    </div>
+
   )
 }

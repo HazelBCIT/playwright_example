@@ -357,6 +357,7 @@ left: 0;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  
 }
 
 .arrow {
@@ -372,4 +373,44 @@ left: 0;
   justify-content: space-between;
   height:85vh;
   margin:5% 22%;
+}
+
+.carousel_container{
+  display: grid;
+  place-items: center;
+  place-content: center;
+
+}
+
+.active {
+  display: inline-block;
+  position: relative;
+}
+
+.inactive {
+  display: none;
+}
+
+.carouselImage {
+  height:200px;
+  width:360px;
+  background-repeat:no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0px;
+
+}
+
+.testOnImageHere {
+  background-color:rgba(16,46,53,0.5);
+  padding:10px;
+  margin: 0px 50px;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translate(-20%, -50%);
+  ;
 }
