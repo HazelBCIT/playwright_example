@@ -67,91 +67,91 @@ test.describe('Main area', () => {
     })
 })
 
-// test.describe('Carousel area', () => {
-//     test('Carousel Arrows', async({ page }) => {
-//         await page.goto(urlAbout)
+test.describe('Carousel area', () => {
+    test('Carousel Arrows', async({ page }) => {
+        await page.goto(urlAbout)
 
-//         await page.screenshot({ path: '/icons/leftArrow.png'})
+        await page.screenshot({ path: '/icons/leftArrow.png'})
 
 
-//         await page.screenshot({ path: '/icons/rightArrow.png'})
-//     })
+        await page.screenshot({ path: '/icons/rightArrow.png'})
+    })
 
-//     test('Carousel main container area stylizing', async({ page }) => { 
-//         await page.goto(urlAbout)
+    test('Carousel main container area stylizing', async({ page }) => { 
+        await page.goto(urlAbout)
 
-//         const carousel = page.locator('#carouselImage');
+        const carousel = page.locator('#carouselImage');
 
-//         const grabbedHeight = await carousel.evaluate((ele) => {
-//             return window.getComputedStyle(ele).getPropertyValue("height")
-//         })
-//         console.log(grabbedHeight);
-//         expect(grabbedHeight).toBe("200px");
+        const grabbedHeight = await carousel.evaluate((ele) => {
+            return window.getComputedStyle(ele).getPropertyValue("height")
+        })
+        console.log(grabbedHeight);
+        expect(grabbedHeight).toBe("200px");
 
-//         const grabbedBackgroundRepeat = await carousel.evaluate((ele) => {
-//             return window.getComputedStyle(ele).getPropertyValue("background-repeat")
-//         })
-//         console.log(grabbedBackgroundRepeat);
-//         expect(grabbedBackgroundRepeat).toBe("no-repeat");
+        const grabbedBackgroundRepeat = await carousel.evaluate((ele) => {
+            return window.getComputedStyle(ele).getPropertyValue("background-repeat")
+        })
+        console.log(grabbedBackgroundRepeat);
+        expect(grabbedBackgroundRepeat).toBe("no-repeat");
 
-//         const grabbedBackgroundSize = await carousel.evaluate((ele) => {
-//             return window.getComputedStyle(ele).getPropertyValue("background-size")
-//         })
-//         console.log(grabbedBackgroundSize);
-//         expect(grabbedBackgroundSize).toBe("cover");
+        const grabbedBackgroundSize = await carousel.evaluate((ele) => {
+            return window.getComputedStyle(ele).getPropertyValue("background-size")
+        })
+        console.log(grabbedBackgroundSize);
+        expect(grabbedBackgroundSize).toBe("cover");
 
-//         const grabbedDisplay = await carousel.evaluate((ele) => {
-//             return window.getComputedStyle(ele).getPropertyValue("display")
-//         })
-//         console.log(grabbedDisplay);
-//         expect(grabbedDisplay).toBe("flex");
+        const grabbedDisplay = await carousel.evaluate((ele) => {
+            return window.getComputedStyle(ele).getPropertyValue("display")
+        })
+        console.log(grabbedDisplay);
+        expect(grabbedDisplay).toBe("flex");
 
-//         const grabbedJustifyContent = await carousel.evaluate((ele) => {
-//             return window.getComputedStyle(ele).getPropertyValue("justify-content")
-//         })
-//         console.log(grabbedJustifyContent);
-//         expect(grabbedJustifyContent).toBe("center");
+        const grabbedJustifyContent = await carousel.evaluate((ele) => {
+            return window.getComputedStyle(ele).getPropertyValue("justify-content")
+        })
+        console.log(grabbedJustifyContent);
+        expect(grabbedJustifyContent).toBe("center");
 
-//         const grabbedAlignItems = await carousel.evaluate((ele) => {
-//             return window.getComputedStyle(ele).getPropertyValue("align-items")
-//         })
-//         console.log(grabbedAlignItems);
-//         expect(grabbedAlignItems).toBe("center");
+        const grabbedAlignItems = await carousel.evaluate((ele) => {
+            return window.getComputedStyle(ele).getPropertyValue("align-items")
+        })
+        console.log(grabbedAlignItems);
+        expect(grabbedAlignItems).toBe("center");
 
-//         const grabbedMargin = await carousel.evaluate((ele) => {
-//             return window.getComputedStyle(ele).getPropertyValue("margin")
-//         })
-//         console.log(grabbedMargin);
-//         expect(grabbedMargin).toBe("40px 0px");
-//     })
+        const grabbedMargin = await carousel.evaluate((ele) => {
+            return window.getComputedStyle(ele).getPropertyValue("margin")
+        })
+        console.log(grabbedMargin);
+        expect(grabbedMargin).toBe("40px 0px");
+    })
 
-//     test('Carousel center text stylizing', async({ page }) => {
-//         await page.goto(urlAbout)
+    test('Carousel center text stylizing', async({ page }) => {
+        await page.goto(urlAbout)
 
-//         const carousel = page.locator('#testOnImageHere');
+        const carousel = page.locator('#testOnImageHere');
 
-//         const grabbedBackgroundColor = await carousel.evaluate((ele) => {
-//             return window.getComputedStyle(ele).getPropertyValue("background-color")
-//         })
-//         console.log(grabbedBackgroundColor);
-//         expect(grabbedBackgroundColor).toBe("rgba(16, 46, 53, 0.5)");
+        const grabbedBackgroundColor = await carousel.evaluate((ele) => {
+            return window.getComputedStyle(ele).getPropertyValue("background-color")
+        })
+        console.log(grabbedBackgroundColor);
+        expect(grabbedBackgroundColor).toBe("rgba(16, 46, 53, 0.5)");
 
-//         const grabbedPaddingCarousel = await carousel.evaluate((ele) => {
-//             return window.getComputedStyle(ele).getPropertyValue("padding")
-//         })
-//         expect(grabbedPaddingCarousel).toBe("10px");
+        const grabbedPaddingCarousel = await carousel.evaluate((ele) => {
+            return window.getComputedStyle(ele).getPropertyValue("padding")
+        })
+        expect(grabbedPaddingCarousel).toBe("10px");
 
-//         const grabbedMarginCarousel = await carousel.evaluate((ele) => {
-//             return window.getComputedStyle(ele).getPropertyValue("margin")
-//         })
-//         expect(grabbedMarginCarousel).toBe("0px 50px");
-//     })
+        const grabbedMarginCarousel = await carousel.evaluate((ele) => {
+            return window.getComputedStyle(ele).getPropertyValue("margin")
+        })
+        expect(grabbedMarginCarousel).toBe("0px 50px");
+    })
 
-//     test('Should contain an unordered list of information', async ({ page }) => {
-//         await page.goto(urlAbout)
-//         await expect(page.locator('ul > li')).toContainText(["Applied & Natural Sciences", "Business & Media", "Computing & IT", "Engineerin", "Health Sciences", "Trades & Apprenticeships"]);
-//     })
-// })
+    test('Should contain an unordered list of information', async ({ page }) => {
+        await page.goto(urlAbout)
+        await expect(page.locator('ul > li')).toContainText(["Applied & Natural Sciences", "Business & Media", "Computing & IT", "Engineerin", "Health Sciences", "Trades & Apprenticeships"]);
+    })
+})
 
 
 test.describe('The Arrow Area', () => {

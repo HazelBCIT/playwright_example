@@ -1,7 +1,6 @@
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
   padding: 6rem;
   min-height: 100vh;
@@ -356,8 +355,7 @@ left: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  
+  justify-content: space-between; 
 }
 
 .arrow {
@@ -414,3 +412,29 @@ left: 0;
   transform: translate(-20%, -50%);
   ;
 }
+
+.input_box {
+  width: 49%;
+  margin:0.5%;
+}
+
+.table_box{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding:25px;
+}
+
+.tr_box{
+  display: flex;
+  flex-direction: row;
+  width: 98%;
+}
+
+.th_box{
+  width: 49%;
+  margin:0.5%;
+  text-align: left;
+}
+
+

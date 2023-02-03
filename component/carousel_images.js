@@ -9,8 +9,8 @@ function CarouselImages({ activeIndex, carouselImg }) {
           key={index}
           className={index === activeIndex ? styles.active : styles.inactive}
         >
-          <img className={styles.carouselImage} id="carouselImage" src={img.img_src} alt=""/>
-          <p className={styles.testOnImageHere} id="testOnImageHere">{img.title}</p>  
+            <img className={styles.carouselImage} id="carouselImage" src={img.img_src} alt=""/>
+            <div className={styles.testOnImageHere} id="testOnImageHere">{img.title}</div>  
         </div>        
       ))}
     </div>
